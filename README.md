@@ -15,6 +15,9 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
+## Development
 To activate the virtual environment (assuming you're developing on Mac): `source venv/bin/activate`
 
 To deactivate: `deactivate`
+
+`cd django_project` to use Django commands from within the project.
