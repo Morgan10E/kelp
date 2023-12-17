@@ -21,3 +21,6 @@ To activate the virtual environment (assuming you're developing on Mac): `source
 To deactivate: `deactivate`
 
 `cd django_project` to use Django commands from within the project.
+
+From `django_project`:
+* `python3 manage.py runserver` to run the local dev server.
