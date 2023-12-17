@@ -6,4 +6,4 @@ class Rating(Metadata):
     name = models.CharField(max_length=128)
     color = models.CharField(max_length=7) # hex color
     description = models.TextField()
-    relative_score = models.IntegerField() # 'goodness' relative to other ratings
+    relative_score = models.IntegerField() # 'goodness' relative to other ratings; lower is better
