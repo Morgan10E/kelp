@@ -11,6 +11,17 @@ The goal is to make an easily-searchable database of seafood like that found in 
 3. For all Django management commands, either prepend with `poetry run`, or run `poetry shell` and run all management commands within the poetry shell. [See more about the poetry shell](https://python-poetry.org/docs/basic-usage/#activating-the-virtual-environment)
 
 
+### Importing data
+
+#### Import ratings
+
+Use the custom command `add_ratings`, which takes a CSV file as input. For example, from the base directory:
+
+```
+poetry run python django_project/manage.py add_ratings test_data/ratings.csv
+```
+
+
 ## Development
 
 `cd django_project` to use Django commands from within the project.
