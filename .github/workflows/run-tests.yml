@@ -1,0 +1,13 @@
+name: run-tests
+run-name: Running pytest
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Install python dependencies
+        uses: ./.github/actions/python-setup
+      - name: Run tests
+        run: poetry run pytest django_project
