@@ -2,7 +2,7 @@ name: run-tests
 run-name: Running pytest
 on: [push]
 jobs:
-  setup:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
