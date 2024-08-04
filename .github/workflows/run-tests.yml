@@ -1,0 +1,15 @@
+name: run-tests
+run-name: Running pytest
+on: [push]
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+      - name: Install dependencies
+        run: poetry install
+      - name: Run tests
+        run: poetry run pytest django_project
