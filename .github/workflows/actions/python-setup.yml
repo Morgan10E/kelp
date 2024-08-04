@@ -1,12 +1,8 @@
 name: python-setup
-run-name: Install poetry, python, and dependencies
-on: [workflow_call]
-jobs:
-  python-setup:
-    runs-on: ubuntu-latest
+description: Install poetry, python, and dependencies
+runs:
+  using: "composite"
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
       - name: Install compatible python version
         id: setup-python
         uses: actions/setup-python@v5
