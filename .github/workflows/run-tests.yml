@@ -2,19 +2,13 @@ name: run-tests
 run-name: Running pytest
 on: [push]
 jobs:
-  test:
+  setup:
+    uses: ./.github/workflows/python-setup.yml
+  pytest:
+    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-      - name: Install compatible python version
-        id: setup-python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
-      - name: Install dependencies
-        run: poetry install
       - name: Run tests
         run: poetry run pytest django_project
