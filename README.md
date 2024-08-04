@@ -17,3 +17,23 @@ The goal is to make an easily-searchable database of seafood like that found in 
 
 From `django_project`:
 * `poetry run python manage.py runserver` to run the local dev server.
+
+
+## Testing
+
+Test python with `pytest`.
+
+Either
+
+```
+cd django_project
+poetry run pytest
+```
+
+or
+
+```
+poetry run pytest django_project
+```
+
+When adding new tests, files should follow the convention `test_*.py` or edit the python_files match in `pyproject.toml`.
