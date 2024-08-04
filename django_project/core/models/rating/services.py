@@ -1,4 +1,4 @@
-from .models import Rating, NAME_COLOR_DELIMITER
+from core.models.rating.models import Rating, NAME_COLOR_DELIMITER
 import re
 
 
