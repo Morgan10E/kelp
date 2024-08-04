@@ -6,21 +6,14 @@ The goal is to make an easily-searchable database of seafood like that found in 
 
 
 ## Setup
-Ensure that you have Python version >= 3.10.
-If you have multiple versions of Python, specify a version >=3.10 by using `python3.x` and `pip3.x` where x is the version.
+1. Install [Poetry](https://python-poetry.org/docs/#installation) if you don't have it already.
+2. Run `poetry install`
+3. For all Django management commands, either prepend with `poetry run`, or run `poetry shell` and run all management commands within the poetry shell. [See more about the poetry shell](https://python-poetry.org/docs/basic-usage/#activating-the-virtual-environment)
 
-```
-python3 -m venv venv
-source venv/bin/activate
-pip3 install -r requirements.txt
-```
 
 ## Development
-To activate the virtual environment (assuming you're developing on Mac): `source venv/bin/activate`
-
-To deactivate: `deactivate`
 
 `cd django_project` to use Django commands from within the project.
 
 From `django_project`:
-* `python3 manage.py runserver` to run the local dev server.
+* `poetry run python manage.py runserver` to run the local dev server.
